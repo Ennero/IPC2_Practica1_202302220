@@ -4,7 +4,7 @@ salir=False
 autos = []
 clientes = []
 compras = []
-idd = 1000
+add = 1000
 
 def registrar_auto():#Función para registrar un auto
     placa = input("Ingrese la placa del auto: ")
@@ -27,6 +27,7 @@ def registrar_cliente():#Función para registrar un cliente
         print("Cliente ",clientes[len(clientes)-1].nombre," registrado exitosamente")
 
 def realizar_compra():#Función para realizar una compra
+    global add
     nit= input("Ingrese el NIT del cliente: ")
     for i in range(len(clientes)):
         if(clientes[i].nit==int(nit)):
@@ -75,8 +76,9 @@ def realizar_compra():#Función para realizar una compra
                             else:
                                 print("No se agregó seguro a la compra")
                             add=add+1
-                            compra=clases.Compra(productos, cliente,idd,subtotal)
+                            compra=clases.Compra(productos, cliente,add,subtotal)
                             compras.append(compra)
+                            print("COMPRA REALIZADA EXITOSAMENTE")
                     case _:
                         print("ERROR, Opción no válida")
             break
@@ -94,7 +96,7 @@ def generar_reporte():#Función para generar un reporte de compras
         print("INFORMACIÓN DEL CLIENTE")
         print("Nombre: ", compras[i].cliente.nombre)
         print("Correo: ", compras[i].cliente.correo)
-        print("NIT: ", compras[i].cliente.nil) 
+        print("NIT: ", compras[i].cliente.nit) 
         print()
         print("INFORMACIÓN DE LA COMPRA")
         for i in range(len(compras[i].productos)):
