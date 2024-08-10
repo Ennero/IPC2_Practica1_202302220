@@ -54,9 +54,9 @@ def realizar_compra():#Función para realizar una compra
                         print("----- AGREGAR AUTO -----")
                         print("Autos Disponibles: ")
                         for i in range(len(autos)): #Mostrando autos disponibles
-                            print("#",i+1," Placa:", autos[i].placa, " Marca:", autos[i].marca, "; Modelo:", autos[i].modelo,"; Descripción:", autos[i].descripcion, "; Precio: Q.", autos[i].precio)
+                            print("#",i+1," Placa:", autos[i].placa, "; Marca:", autos[i].marca, "; Modelo:", autos[i].modelo,"; Descripción:", autos[i].descripcion, "; Precio: Q.", autos[i].precio)
                         placa = input("Ingrese la placa del auto a agregar a la compra: ")
-                        v1=False
+                        v1=True
                         for i in range(len(autos)): #Agregando auto a la compra
                             if(autos[i].placa==placa):
                                 auto=autos[i]
@@ -64,8 +64,6 @@ def realizar_compra():#Función para realizar una compra
                                 if(productos[len(productos)-1].placa==placa):
                                     print("Auto", productos[len(productos)-1].marca, productos[len(productos)-1].modelo,"agregado a la compra")
                                     v1=False
-                            else:
-                                v1=True  
                         if(v1):
                             print("Placa ingresada no existente") #Por si no existe
                     case "2":
@@ -97,22 +95,22 @@ def realizar_compra():#Función para realizar una compra
     if(n1):
         print("Cliente no encontrado, regresando al menú principal")
     
-def generar_reporte():#Función para generar un reporte de compras
+def generar_reporte():  # Función para generar un reporte de compras
     print("----- REPORTE DE COMPRAS -----")
     for i in range(len(compras)):
-        print("========== COMPRA #", i+1, " ==========")
+        print("========== COMPRA #", i + 1, " ==========")
         print("INFORMACIÓN DEL CLIENTE")
         print("Nombre: ", compras[i].cliente.nombre)
         print("Correo: ", compras[i].cliente.correo)
-        print("NIT: ", compras[i].cliente.nit) 
+        print("NIT: ", compras[i].cliente.nit)
         print("Autos comprados: ", len(compras[i].productos))
         print()
         print("INFORMACIÓN DE SU COMPRA")
-        for j in range(len(compras[j].productos)):
+        for j in range(len(compras[i].productos)):
             print("----------------------")
-            print("Auto #", j+1)
-            print(compras[j].productos[j].marca, compras[j].productos[j].modelo), compras[j].productos[j].placa, compras[j].productos[j].descripcion, "Precio: Q.", compras[j].productos[j].precio
-            print("Total: Q.", compras[j].total)
+            print("Auto #", j + 1)
+            print(compras[i].productos[j].marca, compras[i].productos[j].modelo, compras[i].productos[j].placa, compras[i].productos[j].descripcion, "Precio: Q.", compras[i].productos[j].precio)
+        print("Total: Q.", compras[i].total)
     print("========= FIN DE REPORTE ==========")
     
 print("---------- SUPER AUTOS GT ----------")
@@ -137,7 +135,6 @@ while not salir:
             print("----- REALIZAR COMPRA -----")
             realizar_compra()
         case "4":
-            print("----- REPORTE DE COMPRAS -----")
             generar_reporte()
         case "5":
             print("----- DATOS DEL ESTUDIANTE -----")
