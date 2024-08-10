@@ -1,4 +1,5 @@
 #QUE FEO SE VE PHYTON PERO AQUÍ ESTÁN LAS CLASES
+
 class Auto:
     def __init__(self, placa,marca, modelo, descripcion, precio):
         self.placa = placa
