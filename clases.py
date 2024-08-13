@@ -7,9 +7,6 @@ class Auto:
         self.modelo = modelo
         self.descripcion = descripcion
         self.precio = precio
-    
-    def saludar(self):
-        print("Hola, soy un auto")
 
 class Cliente:
     def __init__(self, nombre, correo, nit):
