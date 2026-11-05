@@ -1,68 +1,33 @@
-<div align="center">
+# SuperAutoGT: ventas de vehículos por consola
 
-# 🐍 CLI Data Processor & Matrix Algorithms in Python (IPC2)
+Práctica Python para registrar autos y clientes, realizar compras y generar reportes. Las clases Auto, Cliente y Compra organizan la información en memoria.
 
-**Procesador de datos por consola, operaciones sobre matrices bidimensionales y estructuras de datos dinámicas en Python.**
+## Requisitos
 
-[![Language](https://img.shields.io/badge/Language-Python-blue?style=for-the-badge)](https://github.com/Ennero/IPC2_Practica1_202302220)
-[![Course](https://img.shields.io/badge/Course-Introducción%20a%20la%20Programación%20y%20Computación%202-003366?style=for-the-badge)](https://ingenieria.usac.edu.gt/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+Python 3. Los imports de la aplicación utilizan la biblioteca estándar y el módulo local clases.py; no requiere instalar paquetes externos.
 
-</div>
+## Ejecución
 
----
+Los comandos parten de la raíz del repositorio, salvo donde se indica otra terminal.
 
-
-## 📌 Descripción General
-
-Este repositorio contiene la implementación y entrega de **🐍 CLI Data Processor & Matrix Algorithms in Python (IPC2)**, desarrollado en el curso de **Introducción a la Programación y Computación 2** en la Universidad de San Carlos de Guatemala.
-
-- **Objetivo:** Procesador de datos por consola, operaciones sobre matrices bidimensionales y estructuras de datos dinámicas en Python.
-- **Stack Principal:** `Python`.
-- **Área:** Ciencias de la Computación, Algoritmos y Desarrollo de Software.
-
----
-
-## 🚀 Características y Componentes
-
-- Implementación modular y buenas prácticas de codificación.
-- Manejo estructurado de datos, control de flujo y validaciones.
-- Documentación y scripts de soporte para compilación o ejecución.
-
----
-
-## 📦 Estructura del Proyecto
-
-```
-IPC2_Practica1_202302220/
-├── src/ o archivos de código fuente
-├── docs/ (si aplica)
-├── .gitignore
-├── LICENSE
-└── README.md
+```bash
+python main.py
 ```
 
----
+## Recorrido de demostración
 
-## ⚙️ Requisitos y Ejecución
+Registrar primero un auto y un cliente, realizar una compra desde el menú y consultar el reporte. Los archivos de Documentación contienen el diagrama de clases original.
 
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/Ennero/IPC2_Practica1_202302220.git
-   cd IPC2_Practica1_202302220
-   ```
-2. Ejecutar según el entorno (`Python`):
-   - Consultar los scripts o archivos principales del proyecto para parámetros específicos.
+## Organización
 
----
+Carpetas de la entrega: [`Documentación/`](Documentaci%C3%B3n/).
 
-## 📄 Licencia
+## Alcance y límites
 
-Este proyecto está bajo la Licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Los datos se reinician al cerrar el proceso. El objetivo es practicar programación orientada a objetos y menús; no hay algoritmos de matrices ni una base de datos.
 
----
+## Contexto y licencia
 
-## 👨‍💻 Autor
+Trabajo académico o de aprendizaje conservado en el portafolio de [Enner Mendizabal](https://github.com/Ennero). Los créditos de los trabajos en grupo se conservan en sus entregas y manuales.
 
-- **Enner Mendizabal** - [@Ennero](https://github.com/Ennero)  
-- *Facultad de Ingeniería, Universidad de San Carlos de Guatemala.*
+Consultar [LICENSE](LICENSE) para la licencia de la raíz. Las dependencias y los componentes con avisos o licencias propios conservan sus condiciones.
